@@ -1,810 +1,618 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="monetag" content="a7c5150e173f8e318acd678c3c44d499">
-	<!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- adsense code -->
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5738278092661359"
-     crossorigin="anonymous"></script>
-     <meta name="google-adsense-account" content="ca-pub-5738278092661359">
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <title>Rent4u</title>
-
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobilePrice - Compare Mobile Prices in Pakistan</title>
+    <meta name="description" content="Latest mobile prices in Pakistan, compare prices across all brands and retailers">
+    <meta name="keywords" content="mobile prices, smartphone prices, Pakistan mobile prices, price comparison">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --secondary-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: var(--secondary-color);
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .navbar-brand span {
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .search-bar {
+            background-color: var(--primary-color);
+            padding: 15px 0;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .price-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .price-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .price-card-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .price-card-body {
+            padding: 15px;
+        }
+        
+        .price-highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .brand-logo {
+            height: 50px;
+            margin: 10px;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+        
+        .brand-logo:hover {
+            filter: grayscale(0);
+        }
+        
+        .footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-links h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+        
+        .latest-news {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .news-date {
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        
+        .compare-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        .compare-btn:hover {
+            background-color: #c0392b;
+            color: white;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .featured-phone {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .featured-phone img {
+            transition: transform 0.5s;
+        }
+        
+        .featured-phone:hover img {
+            transform: scale(1.05);
+        }
+        
+        .featured-phone-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .navbar-brand {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              Rent4u
-            </span>
-          </a>
-
-          <div class="navbar-collapse" id="">
-            <div class="user_option">
-              <a href="">
-                Login
-              </a>
-            </div>
-            <div class="custom_menu-btn">
-              <button onclick="openNav()">
-                <span class="s-1"> </span>
-                <span class="s-2"> </span>
-                <span class="s-3"> </span>
-              </button>
-            </div>
-            <div id="myNav" class="overlay">
-              <div class="overlay-content">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="car.html">Cars</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="#">Login</a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
-      <div class="slider_container">
-        <div class="img-box">
-          <img src="images/hero-img.jpg" alt="">
-        </div>
-        <div class="detail_container">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="detail-box">
-                  <h1>
-                    Rent Car <br>
-                    Experts <br>
-                    Service
-                  </h1>
-                  <a href="">
-                    Contact Us
-                  </a>
+    <!-- Top Bar -->
+    <div class="container-fluid bg-dark text-white py-2 d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fas fa-phone-alt me-2"></i> +92 300 1234567
+                    <i class="fas fa-envelope ms-3 me-2"></i> info@mobileprice.pk
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="detail-box">
-                  <h1>
-                    Rent Car <br>
-                    Experts <br>
-                    Service
-                  </h1>
-                  <a href="">
-                    Contact Us
-                  </a>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-white me-3"><i class="fas fa-user me-1"></i> Login</a>
+                    <a href="#" class="text-white"><i class="fas fa-heart me-1"></i> Wishlist</a>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="detail-box">
-                  <h1>
-                    Rent Car <br>
-                    Experts <br>
-                    Service
-                  </h1>
-                  <a href="">
-                    Contact Us
-                  </a>
-                </div>
-              </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-
         </div>
-      </div>
-    </section>
-    <!-- end slider section -->
-  </div>
-  <!-- book section -->
-  <section class="book_section">
-    <div class="form_container">
-      <form action="">
-        <div class="form-row">
-          <div class="col-lg-8">
-            <div class="form-row">
-              <div class="col-md-6">
-                <label for="parkingName">Pick Up Locaion</label>
-                <input type="text" class="form-control" placeholder="acb ">
-              </div>
-              <div class="col-md-6">
-                <label for="parkingNumber">Drop Location</label>
-                <input type="text" class="form-control" placeholder="acb ">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-md-6">
-                <label for="parkingName">Pick Up Date</label>
-                <input type="text" class="form-control" placeholder="07/09/2020">
-              </div>
-              <div class="col-md-6">
-                <label for="parkingNumber">Return Date</label>
-                <input type="text" class="form-control" placeholder="07/09/2020">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="btn-container">
-              <button type="submit" class="">
-                Search
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </form>
     </div>
-    <div class="img-box">
-      <img src="images/book-car.png" alt="">
-    </div>
-  </section>
-
-  <!-- end book section -->
-
-  <!-- car section -->
-
-  <section class="car_section layout_padding2-top layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Better Way For Find Your Favourite Cars
-        </h2>
-        <p>
-          It is a long established fact that a reader will be distracted by the readable
-        </p>
-      </div>
-      <div class="car_container">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/c-1.png" alt="">
-          </div>
-
-          <div class="detail-box">
-            <h5>
-              Choose Your Car
-            </h5>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/c-2.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Get Your Car
-            </h5>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="img-box">
-            <img src="images/c-3.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Contact Your Dealer
-            </h5>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end car section -->
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding-bottom">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-7 px-0">
-          <div class="img-box">
-            <img src="images/about-img.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3">
-          <div class="detail-box">
-            <h2>
-              About Our Cars
-            </h2>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-         <script type="text/javascript">
-  // banner ad code
-	atOptions = {
-		'key' : 'd0a6512e6745dfb3d71e7864c0dc0a98',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/d0a6512e6745dfb3d71e7864c0dc0a98/invoke.js"></script>
-  <!-- end about section -->
-<script type="text/javascript">
-	atOptions = {
-		'key' : '64f2da7e7242c1bfeb8183da2bd58981',
-		'format' : 'iframe',
-		'height' : 300,
-		'width' : 160,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/64f2da7e7242c1bfeb8183da2bd58981/invoke.js"></script>
-
-  <!-- best section -->
-
-  <section class="best_section">
-    <div class="container">
-      <div class="book_now">
-        <div class="detail-box">
-          <h2>
-            Our Best Cars
-          </h2>
-          <p>
-            It is a long established fact that a reader will be distracted by the
-          </p>
-        </div>
-        <div class="btn-box">
-          <a href="">
-            Book Now
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end best section -->
-
-  <!-- rent section -->
-
-  <section class="rent_section layout_padding">
-    <div class="container">
-      <div class="rent_container">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-1.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-2.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-3.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-4.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-5.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-6.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          See More
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- end rent section -->
-
-  <!-- blog section -->
-
-  <section class="blog_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Our Latest Blog
-        </h2>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-        </p>
-      </div>
-    </div>
-    <div class="blog_container">
-      <div class="layout_padding2-top">
-        <div class="carousel-wrap ">
-          <div class="owl-carousel">
-            <div class="item">
-              <div class="box">
-                <div class="date-box">
-                  <h6>
-                    04 Nov 2019
-                  </h6>
-                </div>
-                <div class="img-box">
-                  <img src="images/b-1.jpg" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Vintage
-                  </h5>
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable The point of using Lorem </p>
-                </div>
-              </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mobile<span>Price</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Brands
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="brands.html">All Brands</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="samsung.html">Samsung</a></li>
+                            <li><a class="dropdown-item" href="apple.html">Apple</a></li>
+                            <li><a class="dropdown-item" href="huawei.html">Huawei</a></li>
+                            <li><a class="dropdown-item" href="xiaomi.html">Xiaomi</a></li>
+                            <li><a class="dropdown-item" href="oppo.html">Oppo</a></li>
+                            <li><a class="dropdown-item" href="vivo.html">Vivo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="prices.html">Price List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Compare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <div class="item">
-              <div class="box">
-                <div class="date-box">
-                  <h6>
-                    04 Nov 2019
-                  </h6>
-                </div>
-                <div class="img-box">
-                  <img src="images/b-2.jpg" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Steering wheels
-                  </h5>
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable The point of using Lorem </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="date-box">
-                  <h6>
-                    04 Nov 2019
-                  </h6>
-                </div>
-                <div class="img-box">
-                  <img src="images/b-3.jpg" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Buick Car
-                  </h5>
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable The point of using Lorem </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="date-box">
-                  <h6>
-                    04 Nov 2019
-                  </h6>
-                </div>
-                <div class="img-box">
-                  <img src="images/b-2.jpg" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Steering wheels
-                  </h5>
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable The point of using Lorem </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end blog section -->
-
-  <!-- us section -->
-
-  <section class="us_section">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Why choose Us
-        </h2>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-        </p>
-      </div>
-    </div>
-    <div class="us_container layout_padding2">
-      <div class="content_box">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/u-1.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Low Rent
-            </h5>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/u-2.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Fast Car
-            </h5>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/u-3.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Safe Car
-            </h5>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/u-4.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Quick Support
-            </h5>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          Read More
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- end us section -->
-
-  <!-- client section -->
-
-  <section class="client_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          What Is say Customer
-        </h2>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-        </p>
-      </div>
-      <div class="layout_padding2-top">
-        <div class="carousel-wrap ">
-          <div class="owl-carousel">
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
+    </nav>
+    
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="container">
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <select class="form-select">
+                        <option selected>Select Brand</option>
+                        <option>Samsung</option>
+                        <option>Apple</option>
+                        <option>Huawei</option>
+                        <option>Xiaomi</option>
+                        <option>Oppo</option>
+                        <option>Vivo</option>
+                        <option>Realme</option>
+                        <option>Tecno</option>
+                        <option>Infinix</option>
+                    </select>
                 </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="images/client-1.png" alt="" class="img-1">
-                    <img src="images/client-1-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Established
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
+                <div class="col-md-4">
+                    <select class="form-select">
+                        <option selected>Select Price Range</option>
+                        <option>Under 10,000</option>
+                        <option>10,000 - 20,000</option>
+                        <option>20,000 - 30,000</option>
+                        <option>30,000 - 50,000</option>
+                        <option>50,000 - 80,000</option>
+                        <option>Above 80,000</option>
+                    </select>
                 </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-dark w-100">Search Mobiles</button>
                 </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="images/client-2.png" alt="" class="img-1">
-                    <img src="images/client-2-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Blished
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
-                </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="images/client-1.png" alt="" class="img-1">
-                    <img src="images/client-1-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Establi
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
-                </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="images/client-1.png" alt="" class="img-1">
-                    <img src="images/client-1-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Establi
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- end client section -->
-
-  <!-- contact section -->
-
-  <section class="contact_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Request A call back
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-          <div class="form_container">
-            <form>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="inputName4" placeholder="Name ">
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="inputSubject4" placeholder="Phone">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email id">
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="inputMessage" placeholder="Message">
-              </div>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="">Send</button>
-              </div>
             </form>
-          </div>
         </div>
-      </div>
-      <div class="contact_items">
-
-        <a href="">
-          <div class="img-box">
-            <img src="images/location.png" alt="">
-          </div>
-          <h6>
-            Loram Ipusum ari
-            lo elisant na
-          </h6>
-        </a>
-        <a href="">
-          <div class="img-box">
-            <img src="images/call.png" alt="">
-          </div>
-          <h6>
-            (+12 1234456789)
-          </h6>
-        </a>
-        <a href="">
-          <div class="img-box">
-            <img src="images/mail.png" alt="">
-          </div>
-          <h6>
-            demo@gmail.com
-          </h6>
-        </a>
-
-      </div>
-      <div class="social_container">
-        <div class="social-box">
-          <div>
-            <a href="">
-              <img src="images/fb.png" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="">
-              <img src="images/twitter.png" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="">
-              <img src="images/linkedin.png" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="">
-              <img src="images/insta.png" alt="">
-            </a>
-          </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Compare Mobile Prices in Pakistan</h1>
+            <p class="lead mb-5">Find the best deals on smartphones from all major retailers</p>
+            <a href="prices.html" class="btn btn-primary btn-lg me-2">View Price List</a>
+            <a href="comparison.html" class="btn btn-outline-light btn-lg">Compare Phones</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end contact section -->
-
-  <!-- map section -->
-
-  <section class="map_section">
-    <!-- map section -->
-    <div class="map_container">
-      <div class="map-responsive">
-        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
-      </div>
-    </div>
-    <!-- end map section -->
-  </section>
-
-
-  <!-- end map section -->
-
-  <!-- footer section -->
-  <footer class="container-fluid footer_section">
-    <p>
-      Copyright &copy; 2020 All Rights Reserved. Design by
-      <a href="https://html.design/">Free Html Templates</a>
-    </p>
-  </footer>
-  <!-- footer section -->
-
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <script src="js/custom.js"></script>
-
-
+    </section>
+    
+    <!-- Featured Phones -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Featured Phones</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="featured-phone">
+                        <img src="https://via.placeholder.com/400x300" alt="Samsung Galaxy S22" class="img-fluid w-100">
+                        <div class="featured-phone-overlay">
+                            <h5>Samsung Galaxy S22 Ultra</h5>
+                            <p class="price-highlight mb-1">Rs. 249,999</p>
+                            <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="featured-phone">
+                        <img src="https://via.placeholder.com/400x300" alt="iPhone 13 Pro" class="img-fluid w-100">
+                        <div class="featured-phone-overlay">
+                            <h5>iPhone 13 Pro Max</h5>
+                            <p class="price-highlight mb-1">Rs. 279,999</p>
+                            <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="featured-phone">
+                        <img src="https://via.placeholder.com/400x300" alt="Xiaomi 12 Pro" class="img-fluid w-100">
+                        <div class="featured-phone-overlay">
+                            <h5>Xiaomi 12 Pro</h5>
+                            <p class="price-highlight mb-1">Rs. 189,999</p>
+                            <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Latest Mobile Prices -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Latest Mobile Prices</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="price-card">
+                        <div class="price-card-header">
+                            <h5>Samsung Galaxy A73</h5>
+                        </div>
+                        <div class="price-card-body text-center">
+                            <img src="https://via.placeholder.com/150" alt="Samsung Galaxy A73" class="img-fluid mb-3">
+                            <p class="price-highlight">Rs. 119,999</p>
+                            <p><small>Last Updated: 15 Jul 2023</small></p>
+                            <a href="#" class="btn btn-sm compare-btn">Compare Prices</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="price-card">
+                        <div class="price-card-header">
+                            <h5>iPhone 13</h5>
+                        </div>
+                        <div class="price-card-body text-center">
+                            <img src="https://via.placeholder.com/150" alt="iPhone 13" class="img-fluid mb-3">
+                            <p class="price-highlight">Rs. 199,999</p>
+                            <p><small>Last Updated: 14 Jul 2023</small></p>
+                            <a href="#" class="btn btn-sm compare-btn">Compare Prices</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="price-card">
+                        <div class="price-card-header">
+                            <h5>Redmi Note 11 Pro</h5>
+                        </div>
+                        <div class="price-card-body text-center">
+                            <img src="https://via.placeholder.com/150" alt="Redmi Note 11 Pro" class="img-fluid mb-3">
+                            <p class="price-highlight">Rs. 54,999</p>
+                            <p><small>Last Updated: 14 Jul 2023</small></p>
+                            <a href="#" class="btn btn-sm compare-btn">Compare Prices</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="price-card">
+                        <div class="price-card-header">
+                            <h5>Oppo Reno 7</h5>
+                        </div>
+                        <div class="price-card-body text-center">
+                            <img src="https://via.placeholder.com/150" alt="Oppo Reno 7" class="img-fluid mb-3">
+                            <p class="price-highlight">Rs. 89,999</p>
+                            <p><small>Last Updated: 13 Jul 2023</small></p>
+                            <a href="#" class="btn btn-sm compare-btn">Compare Prices</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="prices.html" class="btn btn-primary">View All Prices</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popular Brands -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Popular Brands</h2>
+            <div class="row text-center">
+                <div class="col-4 col-md-2 mb-4">
+                    <a href="samsung.html"><img src="https://via.placeholder.com/100x50?text=Samsung" alt="Samsung" class="brand-logo"></a>
+                </div>
+                <div class="col-4 col-md-2 mb-4">
+                    <a href="apple.html"><img src="https://via.placeholder.com/100x50?text=Apple" alt="Apple" class="brand-logo"></a>
+                </div>
+                <div class="col-4 col-md-2 mb-4">
+                    <a href="huawei.html"><img src="https://via.placeholder.com/100x50?text=Huawei" alt="Huawei" class="brand-logo"></a>
+                </div>
+                <div class="col-4 col-md-2 mb-4">
+                    <a href="xiaomi.html"><img src="https://via.placeholder.com/100x50?text=Xiaomi" alt="Xiaomi" class="brand-logo"></a>
+                </div>
+                <div class="col-4 col-md-2 mb-4">
+                    <a href="oppo.html"><img src="https://via.placeholder.com/100x50?text=Oppo" alt="Oppo" class="brand-logo"></a>
+                </div>
+                <div class="col-4 col-md-2 mb-4">
+                    <a href="vivo.html"><img src="https://via.placeholder.com/100x50?text=Vivo" alt="Vivo" class="brand-logo"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Latest News & Price Drops -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="section-title">Latest Mobile News</h2>
+                    <div class="latest-news">
+                        <h5>Samsung Galaxy Z Fold 4 Launch Date Announced</h5>
+                        <p class="news-date">Posted on: July 14, 2023</p>
+                        <p>Samsung has officially announced the launch date for its next-generation foldable smartphones, the Galaxy Z Fold 4 and Z Flip 4...</p>
+                        <a href="#" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="latest-news">
+                        <h5>iPhone 14 Pro Max Price in Pakistan Revealed</h5>
+                        <p class="news-date">Posted on: July 12, 2023</p>
+                        <p>Apple's upcoming iPhone 14 series is expected to launch in September, and the expected prices for Pakistan market have been revealed...</p>
+                        <a href="#" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="latest-news">
+                        <h5>Xiaomi 12T Pro Coming to Pakistan Next Month</h5>
+                        <p class="news-date">Posted on: July 10, 2023</p>
+                        <p>Xiaomi has confirmed that its flagship killer, the 12T Pro with 200MP camera will be launching in Pakistan in August 2023...</p>
+                        <a href="#" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="news.html" class="btn btn-primary">View All News</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="section-title">Recent Price Drops</h2>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Samsung Galaxy S21 FE</h6>
+                                <small>3 days ago</small>
+                            </div>
+                            <p class="mb-1">Price dropped from Rs. 129,999 to Rs. 119,999</p>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">iPhone 12</h6>
+                                <small>5 days ago</small>
+                            </div>
+                            <p class="mb-1">Price dropped from Rs. 159,999 to Rs. 149,999</p>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Redmi Note 11</h6>
+                                <small>1 week ago</small>
+                            </div>
+                            <p class="mb-1">Price dropped from Rs. 49,999 to Rs. 44,999</p>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Oppo Reno 6</h6>
+                                <small>1 week ago</small>
+                            </div>
+                            <p class="mb-1">Price dropped from Rs. 79,999 to Rs. 74,999</p>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Vivo V23</h6>
+                                <small>2 weeks ago</small>
+                            </div>
+                            <p class="mb-1">Price dropped from Rs. 99,999 to Rs. 89,999</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="prices.html">Price List</a></li>
+                        <li><a href="comparison.html">Compare Phones</a></li>
+                        <li><a href="news.html">Mobile News</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Popular Brands</h5>
+                    <ul>
+                        <li><a href="samsung.html">Samsung</a></li>
+                        <li><a href="apple.html">Apple</a></li>
+                        <li><a href="huawei.html">Huawei</a></li>
+                        <li><a href="xiaomi.html">Xiaomi</a></li>
+                        <li><a href="oppo.html">Oppo</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Price Ranges</h5>
+                    <ul>
+                        <li><a href="#">Under 10,000</a></li>
+                        <li><a href="#">10,000 - 20,000</a></li>
+                        <li><a href="#">20,000 - 30,000</a></li>
+                        <li><a href="#">30,000 - 50,000</a></li>
+                        <li><a href="#">Above 50,000</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect With Us</h5>
+                    <div class="social-icons mb-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> info@mobileprice.pk<br>
+                        <i class="fas fa-phone-alt me-2"></i> +92 300 1234567
+                    </p>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 hassan.pk - All Rights Reserved</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            // You can add any JavaScript functionality here
+            // For example, to highlight the current page in navigation
+            const currentPage = window.location.pathname.split('/').pop();
+            if (currentPage) {
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPage) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
-
 </html>
