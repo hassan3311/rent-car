@@ -1,1 +1,768 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Galaxy S23 Ultra - MobilePrice</title>
+    <meta name="description" content="Samsung Galaxy S23 Ultra price in Pakistan, specifications, and comparison with other phones">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --secondary-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: var(--secondary-color);
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .product-header {
+            background-color: var(--light-color);
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        .product-image {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .price-card {
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .current-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #777;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .specs-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .specs-table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .specs-table td:first-child {
+            font-weight: bold;
+            width: 30%;
+        }
+        
+        .rating {
+            color: #ffc107;
+        }
+        
+        .compare-checkbox {
+            transform: scale(1.3);
+            margin-right: 8px;
+        }
+        
+        .store-logo {
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .tab-content {
+            padding: 20px;
+            background: white;
+            border-radius: 0 0 8px 8px;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+        
+        .nav-tabs .nav-link.active {
+            font-weight: bold;
+            background: white;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .nav-tabs .nav-link {
+            color: var(--secondary-color);
+            border: none;
+            padding: 12px 20px;
+        }
+        
+        .nav-tabs {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .similar-product {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .similar-product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mobile<span>Price</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Brands
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="brands.html">All Brands</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="samsung.html">Samsung</a></li>
+                            <li><a class="dropdown-item" href="apple.html">Apple</a></li>
+                            <li><a class="dropdown-item" href="huawei.html">Huawei</a></li>
+                            <li><a class="dropdown-item" href="xiaomi.html">Xiaomi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="prices.html">Price List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Compare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Product Header -->
+    <div class="product-header">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="samsung.html">Samsung</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Galaxy S23 Ultra</li>
+                </ol>
+            </nav>
+            <h1>Samsung Galaxy S23 Ultra</h1>
+            <div class="d-flex align-items-center">
+                <div class="rating me-3">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span class="ms-1">4.5 (128 Reviews)</span>
+                </div>
+                <div>
+                    <i class="fas fa-share-alt me-2"></i>
+                    <i class="far fa-heart me-2"></i>
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Product Main Content -->
+    <div class="container mb-5">
+        <div class="row">
+            <!-- Left Column - Product Image -->
+            <div class="col-lg-5">
+                <div class="product-image text-center">
+                    <img src="https://via.placeholder.com/400x400" alt="Samsung Galaxy S23 Ultra" class="img-fluid">
+                    <div class="mt-3">
+                        <button class="btn btn-outline-secondary me-2">
+                            <i class="fas fa-camera me-1"></i> Gallery
+                        </button>
+                        <button class="btn btn-outline-secondary">
+                            <i class="fas fa-video me-1"></i> Videos
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Official Stores -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Available At Official Stores</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/100x30?text=PriceOye" alt="PriceOye" class="store-logo">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between">
+                                    <span>PriceOye.pk</span>
+                                    <span class="text-success">In Stock</span>
+                                </div>
+                                <div class="current-price">Rs. 249,999</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/100x30?text=Daraz" alt="Daraz" class="store-logo">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between">
+                                    <span>Daraz.pk</span>
+                                    <span class="text-success">In Stock</span>
+                                </div>
+                                <div class="current-price">Rs. 255,000</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/100x30?text=HomeShopping" alt="HomeShopping" class="store-logo">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between">
+                                    <span>HomeShopping.pk</span>
+                                    <span class="text-success">In Stock</span>
+                                </div>
+                                <div class="current-price">Rs. 248,500</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Product Details -->
+            <div class="col-lg-7">
+                <!-- Price Comparison -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Price Comparison</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Store</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="https://via.placeholder.com/80x25?text=Telemart" alt="Telemart" class="store-logo">
+                                            Telemart.pk
+                                        </td>
+                                        <td class="current-price">Rs. 249,999</td>
+                                        <td><span class="badge bg-success">In Stock</span></td>
+                                        <td><a href="#" class="btn btn-sm btn-primary">Buy Now</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="https://via.placeholder.com/80x25?text=Shophive" alt="Shophive" class="store-logo">
+                                            Shophive.com
+                                        </td>
+                                        <td class="current-price">Rs. 251,000</td>
+                                        <td><span class="badge bg-success">In Stock</span></td>
+                                        <td><a href="#" class="btn btn-sm btn-primary">Buy Now</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="https://via.placeholder.com/80x25?text=Paklap" alt="Paklap" class="store-logo">
+                                            Paklap.pk
+                                        </td>
+                                        <td class="current-price">Rs. 247,800</td>
+                                        <td><span class="badge bg-warning">Limited Stock</span></td>
+                                        <td><a href="#" class="btn btn-sm btn-primary">Buy Now</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="https://via.placeholder.com/80x25?text=Symbios" alt="Symbios" class="store-logo">
+                                            Symbios.pk
+                                        </td>
+                                        <td class="current-price">Rs. 253,500</td>
+                                        <td><span class="badge bg-success">In Stock</span></td>
+                                        <td><a href="#" class="btn btn-sm btn-primary">Buy Now</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-end">
+                            <a href="#" class="btn btn-outline-primary">View All Prices (12 Stores)</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Key Specifications -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Key Specifications</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><strong>Display:</strong> 6.8" Dynamic AMOLED 2X</li>
+                                    <li class="mb-2"><strong>Processor:</strong> Snapdragon 8 Gen 2</li>
+                                    <li class="mb-2"><strong>RAM:</strong> 12GB</li>
+                                    <li class="mb-2"><strong>Storage:</strong> 256GB/512GB/1TB</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><strong>Camera:</strong> 200MP + 12MP + 10MP + 10MP</li>
+                                    <li class="mb-2"><strong>Battery:</strong> 5000mAh</li>
+                                    <li class="mb-2"><strong>OS:</strong> Android 13</li>
+                                    <li class="mb-2"><strong>Colors:</strong> Phantom Black, Green, Cream, Lavender</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Price History Graph -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Price History</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/600x200?text=Price+History+Graph" alt="Price History" class="img-fluid">
+                        <div class="text-center mt-2">
+                            <button class="btn btn-sm btn-outline-secondary me-2">3 Months</button>
+                            <button class="btn btn-sm btn-outline-secondary me-2">6 Months</button>
+                            <button class="btn btn-sm btn-primary">1 Year</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tabs Section -->
+        <ul class="nav nav-tabs" id="productTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button">Full Specifications</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button">Reviews</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="questions-tab" data-bs-toggle="tab" data-bs-target="#questions" type="button">Q&A</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button">Related News</button>
+            </li>
+        </ul>
+        
+        <div class="tab-content" id="productTabsContent">
+            <!-- Specifications Tab -->
+            <div class="tab-pane fade show active" id="specs" role="tabpanel">
+                <h4 class="mb-4">Samsung Galaxy S23 Ultra Full Specifications</h4>
+                <table class="specs-table">
+                    <tr>
+                        <td>Brand</td>
+                        <td>Samsung</td>
+                    </tr>
+                    <tr>
+                        <td>Model</td>
+                        <td>Galaxy S23 Ultra</td>
+                    </tr>
+                    <tr>
+                        <td>Release Date</td>
+                        <td>February 1, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Dimensions</td>
+                        <td>163.4 x 78.1 x 8.9 mm</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>234 g</td>
+                    </tr>
+                    <tr>
+                        <td>Build</td>
+                        <td>Glass front (Gorilla Glass Victus 2), glass back (Gorilla Glass Victus 2), aluminum frame</td>
+                    </tr>
+                    <tr>
+                        <td>SIM</td>
+                        <td>Nano-SIM and eSIM</td>
+                    </tr>
+                    <tr>
+                        <td>Display Type</td>
+                        <td>Dynamic AMOLED 2X, 120Hz, HDR10+, 1750 nits (peak)</td>
+                    </tr>
+                    <tr>
+                        <td>Display Size</td>
+                        <td>6.8 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Resolution</td>
+                        <td>1440 x 3088 pixels (~500 ppi density)</td>
+                    </tr>
+                    <tr>
+                        <td>Protection</td>
+                        <td>Corning Gorilla Glass Victus 2</td>
+                    </tr>
+                    <tr>
+                        <td>OS</td>
+                        <td>Android 13, One UI 5.1</td>
+                    </tr>
+                    <tr>
+                        <td>Chipset</td>
+                        <td>Qualcomm SM8550-AC Snapdragon 8 Gen 2 (4 nm)</td>
+                    </tr>
+                    <tr>
+                        <td>CPU</td>
+                        <td>Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A510)</td>
+                    </tr>
+                    <tr>
+                        <td>GPU</td>
+                        <td>Adreno 740</td>
+                    </tr>
+                    <tr>
+                        <td>Memory</td>
+                        <td>256GB 8GB RAM, 256GB 12GB RAM, 512GB 12GB RAM, 1TB 12GB RAM</td>
+                    </tr>
+                    <tr>
+                        <td>Main Camera</td>
+                        <td>200 MP, f/1.7, 23mm (wide), 1/1.3", 0.6µm, multi-directional PDAF, Laser AF, OIS<br>
+                            10 MP, f/4.9, 230mm (periscope telephoto), 1/3.52", 1.12µm, Dual Pixel PDAF, OIS, 10x optical zoom<br>
+                            10 MP, f/2.4, 70mm (telephoto), 1/3.52", 1.12µm, Dual Pixel PDAF, OIS, 3x optical zoom<br>
+                            12 MP, f/2.2, 13mm, 120˚ (ultrawide), 1/2.55", 1.4µm, Dual Pixel PDAF, Super Steady video</td>
+                    </tr>
+                    <tr>
+                        <td>Selfie Camera</td>
+                        <td>12 MP, f/2.2, 26mm (wide), Dual Pixel PDAF</td>
+                    </tr>
+                    <tr>
+                        <td>Battery</td>
+                        <td>5000 mAh, non-removable</td>
+                    </tr>
+                    <tr>
+                        <td>Charging</td>
+                        <td>45W wired, PD3.0, 15W wireless (Qi/PMA), 4.5W reverse wireless</td>
+                    </tr>
+                    <tr>
+                        <td>Colors</td>
+                        <td>Phantom Black, Green, Cream, Lavender</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Reviews Tab -->
+            <div class="tab-pane fade" id="reviews" role="tabpanel">
+                <h4 class="mb-4">Customer Reviews</h4>
+                <div class="row mb-4">
+                    <div class="col-md-4 text-center">
+                        <div class="display-4">4.5</div>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>128 Reviews</p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="mb-3">
+                            <span class="me-2">5 Star</span>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" style="width: 70%"></div>
+                            </div>
+                            <span class="ms-2">70%</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="me-2">4 Star</span>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-primary" style="width: 20%"></div>
+                            </div>
+                            <span class="ms-2">20%</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="me-2">3 Star</span>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-info" style="width: 5%"></div>
+                            </div>
+                            <span class="ms-2">5%</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="me-2">2 Star</span>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-warning" style="width: 3%"></div>
+                            </div>
+                            <span class="ms-2">3%</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="me-2">1 Star</span>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-danger" style="width: 2%"></div>
+                            </div>
+                            <span class="ms-2">2%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>
+                            <strong>Ahmed Khan</strong>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <small class="text-muted">15 July 2023</small>
+                    </div>
+                    <h5>Best phone I've ever used</h5>
+                    <p>The camera quality is exceptional, especially the zoom capabilities. Battery life lasts me all day with heavy use. The display is stunning and the performance is flawless.</p>
+                </div>
+                
+                <div class="review mb-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>
+                            <strong>Sara Ahmed</strong>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <small class="text-muted">10 July 2023</small>
+                    </div>
+                    <h5>Great but expensive</h5>
+                    <p>Love everything about this phone but the price is very high. The camera is amazing and the screen is beautiful. Battery life could be better for this price range.</p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">Write a Review</a>
+            </div>
+            
+            <!-- Questions Tab -->
+            <div class="tab-pane fade" id="questions" role="tabpanel">
+                <h4 class="mb-4">Questions & Answers</h4>
+                
+                <div class="mb-4">
+                    <h5>Does it support 5G in Pakistan?</h5>
+                    <p class="text-muted">Yes, the Samsung Galaxy S23 Ultra supports 5G networks in Pakistan. However, 5G availability depends on your carrier's network coverage.</p>
+                    <small class="text-muted">Answered by MobilePrice Team - 12 July 2023</small>
+                    <hr>
+                </div>
+                
+                <div class="mb-4">
+                    <h5>Is there any warranty in Pakistan?</h5>
+                    <p class="text-muted">Yes, Samsung offers 1 year official warranty for Galaxy S23 Ultra purchased from authorized dealers in Pakistan.</p>
+                    <small class="text-muted">Answered by MobilePrice Team - 5 July 2023</small>
+                    <hr>
+                </div>
+                
+                <div class="mb-4">
+                    <h5>Does it come with a charger in the box?</h5>
+                    <p class="text-muted">No, the Galaxy S23 Ultra does not come with a charger in the box. You'll need to purchase a compatible 45W charger separately.</p>
+                    <small class="text-muted">Answered by MobilePrice Team - 1 July 2023</small>
+                    <hr>
+                </div>
+                
+                <button class="btn btn-primary">Ask a Question</button>
+            </div>
+            
+            <!-- News Tab -->
+            <div class="tab-pane fade" id="news" role="tabpanel">
+                <h4 class="mb-4">Related News</h4>
+                
+                <div class="mb-4">
+                    <h5><a href="#">Samsung Galaxy S23 Ultra Review: The Best Android Phone of 2023?</a></h5>
+                    <p class="text-muted">We put the Galaxy S23 Ultra through its paces to see if it's worth the premium price tag...</p>
+                    <small class="text-muted">Published: 10 July 2023</small>
+                    <hr>
+                </div>
+                
+                <div class="mb-4">
+                    <h5><a href="#">Samsung Announces Price Drop for Galaxy S23 Series in Pakistan</a></h5>
+                    <p class="text-muted">Samsung has reduced prices for its flagship S23 series by up to 15% in Pakistan...</p>
+                    <small class="text-muted">Published: 5 July 2023</small>
+                    <hr>
+                </div>
+                
+                <div class="mb-4">
+                    <h5><a href="#">Samsung Galaxy S23 Ultra vs iPhone 14 Pro Max: Camera Comparison</a></h5>
+                    <p class="text-muted">We compare the camera performance of the two flagship smartphones in various conditions...</p>
+                    <small class="text-muted">Published: 28 June 2023</small>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Similar Products -->
+        <h3 class="mt-5 mb-4">Similar Products</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="similar-product">
+                    <img src="https://via.placeholder.com/150x150?text=S22+Ultra" alt="S22 Ultra" class="img-fluid mb-2">
+                    <h5>Samsung Galaxy S22 Ultra</h5>
+                    <div class="current-price mb-2">Rs. 199,999</div>
+                    <div class="d-flex justify-content-between">
+                        <input type="checkbox" class="compare-checkbox" id="compare1">
+                        <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="similar-product">
+                    <img src="https://via.placeholder.com/150x150?text=iPhone+14+PM" alt="iPhone 14 Pro Max" class="img-fluid mb-2">
+                    <h5>iPhone 14 Pro Max</h5>
+                    <div class="current-price mb-2">Rs. 279,999</div>
+                    <div class="d-flex justify-content-between">
+                        <input type="checkbox" class="compare-checkbox" id="compare2">
+                        <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="similar-product">
+                    <img src="https://via.placeholder.com/150x150?text=Xiaomi+13+Pro" alt="Xiaomi 13 Pro" class="img-fluid mb-2">
+                    <h5>Xiaomi 13 Pro</h5>
+                    <div class="current-price mb-2">Rs. 189,999</div>
+                    <div class="d-flex justify-content-between">
+                        <input type="checkbox" class="compare-checkbox" id="compare3">
+                        <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="similar-product">
+                    <img src="https://via.placeholder.com/150x150?text=Oppo+Find+X5" alt="Oppo Find X5 Pro" class="img-fluid mb-2">
+                    <h5>Oppo Find X5 Pro</h5>
+                    <div class="current-price mb-2">Rs. 179,999</div>
+                    <div class="d-flex justify-content-between">
+                        <input type="checkbox" class="compare-checkbox" id="compare4">
+                        <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="prices.html">Price List</a></li>
+                        <li><a href="comparison.html">Compare Phones</a></li>
+                        <li><a href="news.html">Mobile News</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Popular Brands</h5>
+                    <ul>
+                        <li><a href="samsung.html">Samsung</a></li>
+                        <li><a href="apple.html">Apple</a></li>
+                        <li><a href="huawei.html">Huawei</a></li>
+                        <li><a href="xiaomi.html">Xiaomi</a></li>
+                        <li><a href="oppo.html">Oppo</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Price Ranges</h5>
+                    <ul>
+                        <li><a href="#">Under 10,000</a></li>
+                        <li><a href="#">10,000 - 20,000</a></li>
+                        <li><a href="#">20,000 - 30,000</a></li>
+                        <li><a href="#">30,000 - 50,000</a></li>
+                        <li><a href="#">Above 50,000</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect With Us</h5>
+                    <div class="social-icons mb-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> info@mobileprice.pk<br>
+                        <i class="fas fa-phone-alt me-2"></i> +92 300 1234567
+                    </p>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 MobilePrice.pk - All Rights Reserved</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        
+        // Price history buttons
+        document.querySelectorAll('.btn-outline-secondary').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.btn-outline-secondary').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                // Here you would load the corresponding price history data
+            });
+        });
+    </script>
+</body>
+</html>
